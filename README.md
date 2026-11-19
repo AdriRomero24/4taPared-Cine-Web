@@ -3,3 +3,4 @@ Una página Web de Cine interactivo Basado en una simulación de Compra de entra
 
 Equipo/Autores:
 [AdriRomero24] (https://github.com/AdriRomero24)
+[Alexcalvo123] (https://github.com/Alexcalvo123)
