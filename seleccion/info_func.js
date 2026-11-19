@@ -5,7 +5,7 @@ const url = new URLSearchParams(window.location.search);
 const id_peli = url.get('id');
 const id_func = url.get('fun');
 
-fetch(`../backend/sala.php?id=${id_peli}&fun=${id_func}`)
+fetch(`https://thirty-campaign-creek-scsi.trycloudflare.com/4tapared/sala.php?id=${id_peli}&fun=${id_func}`)
 
 .then(response => {
 
@@ -26,7 +26,7 @@ fetch(`../backend/sala.php?id=${id_peli}&fun=${id_func}`)
     sala.textContent = "Sala " + data.sala;
 });
 
-fetch(`../backend/butacas.php?fun=${id_func}`)
+fetch(`https://thirty-campaign-creek-scsi.trycloudflare.com/4tapared/butacas.php?fun=${id_func}`)
 
 .then(response =>{
 
