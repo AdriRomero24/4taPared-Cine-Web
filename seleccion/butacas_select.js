@@ -61,7 +61,7 @@ continuar.addEventListener("click", ()=>{
   const datos_env = {butaca: butaca_select, funcion: id_func, boleto: [bol_g, bol_t]};
   
 
-  fetch("../backend/verifi_buta.php", {
+  fetch("https://thirty-campaign-creek-scsi.trycloudflare.com/4tapared/verifi_buta.php", {
 
     method: "POST",
     headers: {
