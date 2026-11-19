@@ -5,3 +5,4 @@ Equipo/Autores:
 [AdriRomero24] (https://github.com/AdriRomero24)
 [Alexcalvo123] (https://github.com/Alexcalvo123)
 [osgal1102] (https://github.com/osgal1102)
+[victoriatl03] (https://github.com/victoriatl03)
