@@ -6,3 +6,4 @@ Equipo/Autores:
 [Alexcalvo123] (https://github.com/Alexcalvo123)
 [osgal1102] (https://github.com/osgal1102)
 [victoriatl03] (https://github.com/victoriatl03)
+[naty146] (https://github.com/naty146)
