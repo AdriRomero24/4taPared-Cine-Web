@@ -61,7 +61,7 @@ continuar.addEventListener("click", ()=>{
   const datos_env = {butaca: butaca_select, funcion: id_func, boleto: [bol_g, bol_t]};
   
 
-  fetch("https://thirty-campaign-creek-scsi.trycloudflare.com/4tapared/verifi_buta.php", {
+  fetch("https://experts-cio-species-excessive.trycloudflare.com/4tapared/verifi_buta.php", {
 
     method: "POST",
     headers: {
@@ -78,6 +78,17 @@ continuar.addEventListener("click", ()=>{
   .then(data => {
 
      console.log(data);
+
+     if(data.dato == "1"){
+
+      sessionStorage.setItem("Datos-Orden", JSON.stringify(data));
+      sessionStorage.setItem("Datos-Funcion", JSON.stringify(dato_peli));
+
+      window.location.href = `./pago/?orden=${data.uuid}`;
+
+     }
+
+
   })
 
 });

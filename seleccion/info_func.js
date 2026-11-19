@@ -1,3 +1,5 @@
+let dato_peli = {};
+
 document.addEventListener("DOMContentLoaded", ()=>{
 
 const url = new URLSearchParams(window.location.search);
@@ -5,7 +7,7 @@ const url = new URLSearchParams(window.location.search);
 const id_peli = url.get('id');
 const id_func = url.get('fun');
 
-fetch(`https://thirty-campaign-creek-scsi.trycloudflare.com/4tapared/sala.php?id=${id_peli}&fun=${id_func}`)
+fetch(`https://experts-cio-species-excessive.trycloudflare.com/4tapared/sala.php?id=${id_peli}&fun=${id_func}`)
 
 .then(response => {
 
@@ -24,9 +26,22 @@ fetch(`https://thirty-campaign-creek-scsi.trycloudflare.com/4tapared/sala.php?id
     fecha.textContent = data.fecha;
     hora.textContent = data.hora;
     sala.textContent = "Sala " + data.sala;
+
+    dato_peli = {
+
+        titu: data.titulo,
+    fecha: data.fecha,
+    hora: data.hora,
+    sala: "Sala " + data.sala,
+    cartel: data.cartel
+
+
+    };
+
+    console.log(dato_peli);
 });
 
-fetch(`https://thirty-campaign-creek-scsi.trycloudflare.com/4tapared/butacas.php?fun=${id_func}`)
+fetch(`https://experts-cio-species-excessive.trycloudflare.com/4tapared/butacas.php?fun=${id_func}`)
 
 .then(response =>{
 

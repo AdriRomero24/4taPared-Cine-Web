@@ -80,9 +80,38 @@ const reg = document.getElementById("regis");
 const ini = document.getElementById("inic");
 
 
-reg/addEventListener("submit", () =>{
+reg.addEventListener("submit", (e) =>{
 
-    fetch()
+    e.preventDefault();
+
+    const datos_usu_reg = {nombre: nombre_reg.value, apellido: apellido_reg.value, correo: correo_reg.value, contraseña: contra.value};
+    console.log(datos_usu_reg);
+
+    fetch("https://experts-cio-species-excessive.trycloudflare.com/4tapared/registro.php", {
+
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(datos_usu_reg)
+
+
+    })
+    .then(response => {
+
+        return response.json();
+
+    })
+    .then(data => {
+      
+        console.log(data);
+
+        if(data == "1"){
+
+            window.location.href = "../"
+        }
+
+
+
+    });
 
 
 

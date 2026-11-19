@@ -1,7 +1,7 @@
 
 let conect_func = (id, fecha) => {
 
-    fetch(`https://thirty-campaign-creek-scsi.trycloudflare.com/4tapared/funciones.php?id=${id}&fecha=${fecha}`)
+    fetch(`https://experts-cio-species-excessive.trycloudflare.com/4tapared/funciones.php?id=${id}&fecha=${fecha}`)
 
     .then(response => {
      
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     const datos_pet = {id: idselect};
 
-    fetch("https://thirty-campaign-creek-scsi.trycloudflare.com/4tapared/info_peli.php",{
+    fetch("https://experts-cio-species-excessive.trycloudflare.com/4tapared/info_peli.php",{
 
         method: "POST",
         headers: {
