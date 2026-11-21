@@ -1,7 +1,7 @@
 
 let conect_func = (id, fecha) => {
 
-    fetch(`../backend/funciones.php?id=${id}&fecha=${fecha}`)
+    fetch(`https://backend-4tapared.onrender.com/funciones.php?id=${id}&fecha=${fecha}`)
 
     .then(response => {
      
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     const datos_pet = {id: idselect};
 
-    fetch("../backend/info_peli.php",{
+    fetch("https://backend-4tapared.onrender.com/info_peli.php",{
 
         method: "POST",
         headers: {
