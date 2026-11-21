@@ -67,6 +67,7 @@ continuar.addEventListener("click", ()=>{
     headers: {
             "Content-Type": "application/json"
         },
+      credentials: 'include', //Esto permite el guardado y envio de cookies para el codigo backend
     body: JSON.stringify(datos_env)
 
   })
