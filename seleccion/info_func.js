@@ -7,7 +7,7 @@ const url = new URLSearchParams(window.location.search);
 const id_peli = url.get('id');
 const id_func = url.get('fun');
 
-fetch(`https://experts-cio-species-excessive.trycloudflare.com/4tapared/sala.php?id=${id_peli}&fun=${id_func}`)
+fetch(`../backend/sala.php?id=${id_peli}&fun=${id_func}`)
 
 .then(response => {
 
@@ -41,19 +41,30 @@ fetch(`https://experts-cio-species-excessive.trycloudflare.com/4tapared/sala.php
     console.log(dato_peli);
 });
 
-fetch(`https://experts-cio-species-excessive.trycloudflare.com/4tapared/butacas.php?fun=${id_func}`)
+const butaca_div = document.getElementsByClassName("butaca");
 
-.then(response =>{
+for(let i = 0; i <= (butaca_div.length - 1); i++){
+
+      butaca_div[i].classList.add("carga");
+}
+
+
+
+async function butacas_estado() {
+
+    await fetch(`../backend/butacas.php?fun=${id_func}`)
+
+    .then(response =>{
 
     return response.json();
 
-})
+    })
 
-.then(data => {
+    .then(data => {
 
     console.log(data);
 
-    const butaca_div = document.getElementsByClassName("butaca");
+    
     console.log(butaca_div.length);
     let butaca_cont = 0;
     const filas = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
@@ -80,7 +91,23 @@ fetch(`https://experts-cio-species-excessive.trycloudflare.com/4tapared/butacas.
              
         }
     }
-})
+
+    
+  });
+
+  for(let i = 0; i <= (butaca_div.length - 1); i++){
+
+      butaca_div[i].classList.remove("carga");
+   }
+
+   
+
+    
+}
+
+
+
+butacas_estado(); // Ejecutar funcion de fetch de las butacas
 
 
  const volver = document.getElementById("volv");
@@ -105,16 +132,5 @@ fetch(`https://experts-cio-species-excessive.trycloudflare.com/4tapared/butacas.
  });
 
 
- fetch('https://ve.dolarapi.com/v1/dolares/oficial')
-  
- .then(response => {
-
-    return response.json();
-
- })
-
- .then(data => {
-
-   console.log(data.promedio);
- });
+ 
 });

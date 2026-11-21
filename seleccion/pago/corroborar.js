@@ -20,7 +20,10 @@ ico.addEventListener("click", () => {
 
     if(comprobar_accion()){
 
+        sessionStorage.clear();
+
         window.location.href = "../../"
+        
     }
 });
 
@@ -30,6 +33,8 @@ pe.addEventListener("click", () => {
   
 
     if(comprobar_accion()){
+
+        sessionStorage.clear();
 
         window.location.href = "../../#sec_peli"
     }
@@ -42,6 +47,8 @@ ca.addEventListener("click", () => {
     
 
     if(comprobar_accion()){
+
+        sessionStorage.clear();
 
         window.location.href = "../../#sec_caram"
     }

@@ -1,7 +1,7 @@
 
 let conect_func = (id, fecha) => {
 
-    fetch(`https://experts-cio-species-excessive.trycloudflare.com/4tapared/funciones.php?id=${id}&fecha=${fecha}`)
+    fetch(`../backend/funciones.php?id=${id}&fecha=${fecha}`)
 
     .then(response => {
      
@@ -36,11 +36,25 @@ const fechas = document.getElementsByClassName("fecha");  // Divs de fechas
 const urlpara = new URLSearchParams(window.location.search);
 const idselect = urlpara.get('id');
 
+ const titulo_peli = document.getElementById("titulo");
+ const genero_peli = document.getElementById("gen");
+ const duracion_peli = document.getElementById("dur");
+ const clasificacion_peli = document.getElementById("cla");
+ const poster_peli = document.getElementById("poster");
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () =>{
    
     console.log("hola");
+
+    titulo_peli.classList.add("carga");
+    genero_peli.classList.add("carga");
+    duracion_peli.classList.add("carga");
+    clasificacion_peli.classList.add("carga");
+    poster_peli.classList.add("carga");
 
     
 
@@ -53,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     const datos_pet = {id: idselect};
 
-    fetch("https://experts-cio-species-excessive.trycloudflare.com/4tapared/info_peli.php",{
+    fetch("../backend/info_peli.php",{
 
         method: "POST",
         headers: {
@@ -70,17 +84,19 @@ document.addEventListener("DOMContentLoaded", () =>{
         console.log("datos de la pelicula: ", data);
 
 
-        const titulo_peli = document.getElementById("titulo");
-        const genero_peli = document.getElementById("gen");
-        const duracion_peli = document.getElementById("dur");
-        const clasificacion_peli = document.getElementById("cla");
-        const poster_peli = document.getElementById("poster");
+       
 
         titulo_peli.textContent = data.titulo;
         duracion_peli.textContent = data.duracion + " Min";
         genero_peli.textContent = data.genero;
         clasificacion_peli.textContent = data.clasificacion;
         poster_peli.style.backgroundImage = `url(../${data.cartel})`;
+
+        titulo_peli.classList.remove("carga");
+        genero_peli.classList.remove("carga");
+        duracion_peli.classList.remove("carga");
+        clasificacion_peli.classList.remove("carga");
+        poster_peli.classList.remove("carga");
         
 
     })

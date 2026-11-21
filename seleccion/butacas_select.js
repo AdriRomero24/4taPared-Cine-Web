@@ -22,7 +22,7 @@ for (let i = 0; i <= (butacas.length - 1); i++){
 
         verificar_select();
 
-      } else if (!butacas[i].classList.contains("ocu")){
+      } else if (!butacas[i].classList.contains("ocu") && !butacas[i].classList.contains("carga")){
 
         butacas[i].classList.add("select");
         let but = butacas[i].getAttribute("id");
@@ -61,7 +61,7 @@ continuar.addEventListener("click", ()=>{
   const datos_env = {butaca: butaca_select, funcion: id_func, boleto: [bol_g, bol_t]};
   
 
-  fetch("https://experts-cio-species-excessive.trycloudflare.com/4tapared/verifi_buta.php", {
+  fetch("../backend/verifi_buta.php", {
 
     method: "POST",
     headers: {
@@ -85,7 +85,13 @@ continuar.addEventListener("click", ()=>{
       sessionStorage.setItem("Datos-Funcion", JSON.stringify(dato_peli));
 
       window.location.href = `./pago/?orden=${data.uuid}`;
+      
 
+     } else if(data == "2"){
+
+        alert("Tienes que registrarte para comprar entradas!");
+
+        window.location.href = "../sesion";
      }
 
 

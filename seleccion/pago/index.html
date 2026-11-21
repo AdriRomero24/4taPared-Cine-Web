@@ -47,38 +47,39 @@
 
 
                 <div class="peli_info">
-                    <div class="poster_peli"></div>
+                    <div class="poster_peli" id="car"></div>
                     <div class="texto_peli">
-                        <h2>Titulo de la pelicula</h2>
-                        <p><span>Fecha</span><span>18:00</span><span>Sala 1</span></p>
+                        <h2 id="titul">Titulo de la pelicula</h2>
+                        <p><span id="fec">Fecha</span><span id="hor">18:00</span><span id="sal">Sala 1</span></p>
                     </div>
                 </div>
 
                 <div class="comp_info">
                     <p>Butacas: </p>
-                    <p class="prec">Subtotal: $0 </p>
+                    <p id="numbut"></p>
+                    <p class="prec">Subtotal: <span id="gen">$0</span> </p>
                 </div>
 
                 <div class="comp_info">
                     <p>Servicio Web: </p>
-                    <p class="prec">Subtotal: $0 </p>
+                    <p class="prec">Subtotal: <span id="ter">$0</span> </p>
                 </div>
 
                 <div class="comp_info">
                     <p>Iva: 16%</p>
-                    <p class="prec">Subtotal: $0 </p>
+                    <p class="prec">Subtotal: <span id="iva">$0</span> </p>
                 </div>
 
                 <div class="comp_info">
                     <p>TOTAL</p>
-                    <p class="prec">$0.00 </p>
+                    <p class="prec" id="total">$0.00 </p>
                 </div>
             </main>
         </div>
 
         <div class="botones_navegar">
-                <a href="../" style="text-decoration: none; color: inherit;"><div class="boton_nav"><span>Volver</span></div></a>
-                <a href="../../" style="text-decoration: none; color: inherit;" onclick="alert('Compra Realizada!')"><div class="boton_nav"><span>Continuar</span></div></a>
+                <div class="boton_nav" id="volv"><span>Volver</span></div>
+                <div class="boton_nav" id="comp"><span>Continuar</span></div>
               </div>
     </article>
 
@@ -112,6 +113,7 @@
     </footer>
 
    <script src="corroborar.js"></script>
+   <script src="info_orden.js"></script>
 
 </body>
 

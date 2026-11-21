@@ -78,16 +78,23 @@ const apellido_reg = document.getElementById("apellido");
 const correo_reg = document.getElementById("correo");
 const reg = document.getElementById("regis");
 const ini = document.getElementById("inic");
+const corr_ini = document.getElementById("correoini");
 
 
 reg.addEventListener("submit", (e) =>{
 
     e.preventDefault();
 
+    if(contra.value != cont_comp.value){
+
+        alert("Ambas contraseñas deben ser iguales. Intenta de nuevo");
+        return;
+    }
+
     const datos_usu_reg = {nombre: nombre_reg.value, apellido: apellido_reg.value, correo: correo_reg.value, contraseña: contra.value};
     console.log(datos_usu_reg);
 
-    fetch("https://experts-cio-species-excessive.trycloudflare.com/4tapared/registro.php", {
+    fetch("../backend/registro.php", {
 
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -107,6 +114,58 @@ reg.addEventListener("submit", (e) =>{
         if(data == "1"){
 
             window.location.href = "../"
+        }
+
+        else if(data == "2"){
+
+            alert("Es posible que tu usuario exista. Intenta de nuevo!");
+            return;
+        }
+
+
+
+    });
+
+
+
+});
+
+
+ini.addEventListener("submit", (e) =>{
+
+    e.preventDefault();
+
+
+
+    const datos_usu_ini = {corr: corr_ini.value, contr: contra_inic.value};
+    console.log(datos_usu_ini);
+
+    fetch("../backend/inicio.php", {
+
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(datos_usu_ini)
+
+
+    })
+    .then(response => {
+
+        return response.json();
+
+    })
+    .then(data => {
+      
+        console.log(data);
+
+        if(data == "1"){
+
+            window.location.href = "../"
+        }
+
+        else if(data == "2"){
+
+            alert("El correo o la contraseña son incorrectos. Intenta de nuevo!");
+            return;
         }
 
 

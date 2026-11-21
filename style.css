@@ -465,6 +465,16 @@ header{
         background-size: cover;
         background-position: center;
 
+        
+        &.carga{
+
+          background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 25%);
+          border: none;
+          animation: cargando 2s infinite;
+          background-size: 200% 200%;
+
+        }
+
 
 
 
@@ -478,9 +488,13 @@ header{
         color: white;
         font-family: montserrat;
 
+        
+
         & h1{
 
             margin-bottom: 20px;
+
+        
         }
 
         & .mas_info{
@@ -498,11 +512,14 @@ header{
                 border-radius: 20px;
                 display: flex;
                 border: 1px solid #693AD6;
+
+                
                 
 
                 & span{
 
                     margin: auto;
+                
                 }
                 
 
@@ -735,6 +752,17 @@ header{
 
                             background-color: #1e1b25;
                         }
+
+                        &.carga{
+
+                        background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 25%);
+                        border: none;
+                        animation: cargando 2s infinite;
+                        background-size: 200% 200%;
+
+                        }
+
+                        
                     }
 
                     
@@ -784,6 +812,8 @@ header{
 
                         background-color: #693AD6;
                     }
+
+                    
                 }
             }
         }
@@ -897,6 +927,17 @@ header{
         }
     }
 }
+@keyframes cargando{
+                            
+        0%{
+            background-position: -200% 0%;
+        }
+
+        100%{
+
+            background-position: 200% 0%;
+        }
+   }
 
  .botones_navegar{
 
@@ -977,9 +1018,9 @@ header{
                 & .poster_peli{
 
                     width: 12%;
+                    min-width: 100px;
                     height: 145px;
                     background-size: cover;
-                    background-image: url(assets/poster1.jpg);
                     border-radius: 7px;
                     border: 1px solid #292533;
 
@@ -1120,6 +1161,21 @@ header{
         
     }
 
+    .footer img{
+
+        width: 75px;
+    }
+
+    .footer .referencia{
+
+        font-size: 14px;
+    }
+
+    .resumen_con{
+
+        width: 90%;
+    }
+
     
     
 }
@@ -1140,6 +1196,7 @@ header{
     & img, .referencia{
 
         margin: auto;
+        
     }
 }
 
