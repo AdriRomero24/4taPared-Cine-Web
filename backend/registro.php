@@ -3,6 +3,7 @@
 header("Access-Control-Allow-Origin: https://adriromero24.github.io");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Credentials: true"); //Permite la llegada y/o envio de cookies HttpOnly (Token JWT)
 
 
 use Firebase\JWT\JWT;
@@ -118,7 +119,7 @@ if((isset($datos_rec->nombre) && isset($datos_rec->apellido) && isset($datos_rec
               'path'     => '/',
              'secure'   => true, 
              'httponly' => true,
-            'samesite' => 'Strict'
+            'samesite' => 'None' // Al estar la backend y el frontend en diferentes dominios o hostings, se declara None
         ]
     );
 
