@@ -81,7 +81,7 @@ comp.addEventListener("click", () => {
 
     if(intent <= 1){
  
-    fetch("../../backend/orden.php",{
+    fetch("https://backend-4tapared.onrender.com/orden.php",{
 
         method: "POST",
         headers: {"Content-Type": "application/json"},

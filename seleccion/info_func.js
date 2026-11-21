@@ -7,7 +7,7 @@ const url = new URLSearchParams(window.location.search);
 const id_peli = url.get('id');
 const id_func = url.get('fun');
 
-fetch(`../backend/sala.php?id=${id_peli}&fun=${id_func}`)
+fetch(`https://backend-4tapared.onrender.com/sala.php?id=${id_peli}&fun=${id_func}`)
 
 .then(response => {
 
@@ -52,7 +52,7 @@ for(let i = 0; i <= (butaca_div.length - 1); i++){
 
 async function butacas_estado() {
 
-    await fetch(`../backend/butacas.php?fun=${id_func}`)
+    await fetch(`https://backend-4tapared.onrender.com/butacas.php?fun=${id_func}`)
 
     .then(response =>{
 

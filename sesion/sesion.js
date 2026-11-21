@@ -94,7 +94,7 @@ reg.addEventListener("submit", (e) =>{
     const datos_usu_reg = {nombre: nombre_reg.value, apellido: apellido_reg.value, correo: correo_reg.value, contraseña: contra.value};
     console.log(datos_usu_reg);
 
-    fetch("../backend/registro.php", {
+    fetch("https://backend-4tapared.onrender.com/registro.php", {
 
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -140,7 +140,7 @@ ini.addEventListener("submit", (e) =>{
     const datos_usu_ini = {corr: corr_ini.value, contr: contra_inic.value};
     console.log(datos_usu_ini);
 
-    fetch("../backend/inicio.php", {
+    fetch("https://backend-4tapared.onrender.com/inicio.php", {
 
         method: "POST",
         headers: {"Content-Type": "application/json"},
