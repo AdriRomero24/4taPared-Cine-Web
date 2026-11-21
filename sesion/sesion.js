@@ -98,6 +98,7 @@ reg.addEventListener("submit", (e) =>{
 
         method: "POST",
         headers: {"Content-Type": "application/json"},
+        credentials: 'include', //Esto permite el guardado y envio de cookies para el codigo backend
         body: JSON.stringify(datos_usu_reg)
 
 
@@ -144,6 +145,7 @@ ini.addEventListener("submit", (e) =>{
 
         method: "POST",
         headers: {"Content-Type": "application/json"},
+        credentials: 'include', //Esto permite el guardado y envio de cookies para el codigo backend
         body: JSON.stringify(datos_usu_ini)
 
 
