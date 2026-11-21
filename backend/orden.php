@@ -1,9 +1,13 @@
 <?php
 
+header("Access-Control-Allow-Origin: https://adriromero24.github.io");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+
 include("conexion.php");
 include("veri_sesion.php");
 
-ob_clean();
+//ob_clean();
 
 
 header("Content-Type: application/json; charset=utf-8");

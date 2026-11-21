@@ -1,9 +1,14 @@
 <?php
 
+header("Access-Control-Allow-Origin: https://adriromero24.github.io");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+
+
 include("conexion.php");
 
 
-ob_clean();
+//ob_clean();
 
 function id_sala($id, $conec){
 
