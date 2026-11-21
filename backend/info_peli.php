@@ -9,7 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 include("conexion.php");
 include("pelicula.php");
 
-ob_clean();
+
 
 header("Content-Type: application/json; charset=utf-8");
 
