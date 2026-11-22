@@ -69,6 +69,12 @@ inic_tit.addEventListener("click", () => {
 
         inic_cont.classList.add("act");
         regis_cont.classList.add("dif");
+
+        window.scrollTo({
+
+        behavior: "smooth",
+        top: 130
+        });
     }
 
 });
