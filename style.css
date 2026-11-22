@@ -557,6 +557,13 @@ header{
             display: flex;
             cursor: pointer;
 
+            &:hover{
+
+             translate: 0px -3px;
+             box-shadow: 0px 5px 10px 3px #000000;
+             transition: all 0.1s;
+            }
+
             & span{
 
                 margin: auto;
@@ -570,6 +577,13 @@ header{
 
                background-color: #2c0d69;
                border: 1px solid #693AD6;
+
+               &:hover{
+
+                translate: none !important;
+                box-shadow: none;
+                transition: none;
+                }
 
                & span{
 
