@@ -4,8 +4,7 @@ const hora = document.getElementById("hor");
 const sala = document.getElementById("sal");
 const but = document.getElementById("numbut");
 const cartel = document.getElementById("car");
-const general = document.getElementById("gen");
-const tercero = document.getElementById("ter");
+const bolet = document.getElementById("bol");
 const iva = document.getElementById("iva");
 const total = document.getElementById("total");
 const comp = document.getElementById("comp");
@@ -39,8 +38,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         
     });
 
-    general.textContent = "$ " + coste.costes.general;
-    tercero.textContent = "$ " + coste.costes.tercero;
+    bolet.textContent = "$ " + (coste.costes.general + coste.costes.tercero);
     iva.textContent = "$ " + coste.costes.iva;
 
 
