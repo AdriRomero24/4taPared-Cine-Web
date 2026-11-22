@@ -742,15 +742,35 @@ header{
                         background-color: #584d73;
                         border: 1px solid #693AD6;
 
+                        &:hover{
+
+                            translate: 0px -2.5px;
+                            box-shadow: 0px 5px 12px 1px #000000;
+                            transition: all 0.1s;
+                        }
+
                         &.select{
 
                             background-color: #693AD6;
                             border-color: white;
+
+                            &:hover{
+
+                                translate: none !important;
+                                box-shadow: none;
+                            }
                         }
 
                         &.ocu{
 
                             background-color: #1e1b25;
+
+                            &:hover{
+
+                                translate: none !important;
+                                box-shadow: none;
+                                transition: none;
+                            }
                         }
 
                         &.carga{
@@ -761,6 +781,8 @@ header{
                         background-size: 200% 200%;
 
                         }
+
+                        
 
                         
                     }
