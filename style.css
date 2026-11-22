@@ -794,6 +794,13 @@ header{
                         animation: cargando 2s infinite;
                         background-size: 200% 200%;
 
+                           &:hover{
+
+                                translate: none !important;
+                                box-shadow: none;
+                                transition: none;
+                            }
+
                         }
 
                         
